@@ -9,12 +9,12 @@ const dessertSchema = new Schema ({
 },
     frosting: {
     type: String,
-        enum: ['NADA','VAINILLA','LIME','CHOCOLATE'],
+        enum: ['NADA','CLASSIC','CHOCOLATE','STRAWBERRY'],
         default: 'NADA'
 },
     extras: {
         type: String,
-        enum: ['NADA','M&M','NUEZ','CHISPAS', 'PRETZELS'],
+        enum: ['NADA','M&Ms','NUEZ','CHISPAS DE CHOCOLATE', 'PRETZELS', 'PANDITAS', 'CHISPAS DE COLORES', 'OREO', 'TOCINO', 'FRUITY PEBBLES', 'BACON'],
         default: 'NADA'
     }
 });
