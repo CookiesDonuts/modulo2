@@ -10,3 +10,8 @@ npm-debug.log
 # Config VSCode y Webstorm
 .idea
 .vscode
+
+# Seeds
+seeds.js
+
+
