@@ -58,7 +58,7 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 
 // default value for title local
-app.locals.title = 'The paradaise is made from sugar';
+app.locals.title = 'Fudge Yeah!';
 
 
 

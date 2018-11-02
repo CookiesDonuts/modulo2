@@ -8,8 +8,8 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
-router.post("/login",  passport.authenticate("local", {
-  successRedirect: "/checkorder",
+router.post("/login", passport.authenticate("local", {
+  successRedirect: "/",
   failureRedirect: "/auth/login"
 }));
 
@@ -29,16 +29,16 @@ router.post("/signup", (req, res) => {
               message: "Por favor confirma tu correo"
           };
           mail.send(options);
-          res.redirect("/auth/login")
+          res.redirect("/checkorder")
       })
       .catch(err => {
           res.status(500).render("signup",{err, msg:"No se completó el registro"})
       })
 });
 
-router.post("/logout", (req, res) => {
+router.get("/logout", (req, res) => {
   req.logout();
-  res.redirect("/auth/login");
+  res.redirect("/");
 });
 
 module.exports = router;
