@@ -3,28 +3,56 @@
     <div>
         <label for="">
             Usuario:
-            <input type="text" name="username">
+            <input value="{{user.username}}" type="text" name="username" required>
         </label>
     </div>
 
     <div>
         <label for="">
             Correo electrónico:
-            <input type="email" name="email">
+            <input value="{{user.email}}" type="email" name="email" required>
         </label>
     </div>
 
     <div>
         <label for="">
+            Nombre:
+            <input value="{{user.name}}" type="text" name="name" required>
+        </label>
+    </div>
+    <div>
+        <label for="">
+            Apellido:
+            <input value="{{user.lastname}}" type="text" name="lastname" required>
+        </label>
+    </div>
+    <div>
+        <label for="">
+            Dirección:
+            <input value="{{user.address}}" type="text" name="address" required>
+        </label>
+    </div>
+
+  
+  <div>
+        <label for="">
+           Número telefónico:
+            <input value="{{user.phone}}" type="text" name="phone">
+        </label>
+    </div>
+
+
+    <div>
+        <label for="">
             Contraseña:
-            <input type="password" name="password">
+            <input value="{{user.password}}" type="password" name="password" required>
         </label>
     </div>
 
     <div>
         <label for="">
             Confirmar contraseña:
-            <input type="password" name="password-confirm">
+            <input type="password" name="password-confirm" required>
         </label>
     </div>
 

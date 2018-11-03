@@ -29,7 +29,7 @@ router.post("/signup", (req, res) => {
               message: "Por favor confirma tu correo"
           };
           mail.send(options);
-          res.redirect("/checkorder")
+          res.redirect("/")
       })
       .catch(err => {
           res.status(500).render("signup",{err, msg:"No se completó el registro"})

@@ -70,7 +70,7 @@ const auth = require("./routes/auth");
 const profile = require("./routes/profile");
 app.use('/', index);
 app.use("/auth", auth);
-app.use("/profile", profile);
+app.use("/", profile);
 
 
 module.exports = app;

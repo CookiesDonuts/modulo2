@@ -18,8 +18,7 @@ const userSchema = new Schema ({
     lastname: String,
     password: String,
     address: String,
-    avatar: String,
-    phone: Number,
+    phone: String,
     activate: false
 
 }, {
