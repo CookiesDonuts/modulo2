@@ -19,13 +19,15 @@ const userSchema = new Schema ({
     password: String,
     address: String,
     avatar: String,
-    phone: Number
+    phone: Number,
+    activate: false
 
 }, {
     timestamps: {
         createdAt: "created_at",
         updatedAt: "updated_at"
     }
+
 });
 
 

@@ -36,6 +36,21 @@ router.post("/signup", (req, res) => {
       })
 });
 
+router.get("/activate/:id", (req, res) => {
+  const updates = {
+    activate: true
+    }
+
+  User.findByIdAndUpdate(req.params.id, updates)
+    .then(user => res.render('verify'))
+    .catch(err => res.render('error'));
+
+});
+
+router.post("/activate", (req, res) => {
+
+});
+
 router.get("/logout", (req, res) => {
   req.logout();
   res.redirect("/");
