@@ -1,1 +1,34 @@
-<p>Hola en profile</p>
+<p>Hola {{user.username}}</p>
+
+<p>Actualiza tus datos</p>
+
+<form action="/profile" method="post">
+
+    <div>
+        <label for="">
+            Nuevo correo electrónico:
+            <input type="email" name="email">
+        </label>
+    </div>
+
+    <div>
+        <label for="">
+            Nueva contraseña:
+            <input type="password" name="password">
+        </label>
+    </div>
+
+    <div>
+        <label for="">
+            Confirmar contraseña:
+            <input type="password" name="password-confirm">
+        </label>
+    </div>
+
+    <div>
+        <button type="submit">Actualizar</button>
+    </div>
+
+
+
+</form>
