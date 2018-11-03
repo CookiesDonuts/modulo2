@@ -13,7 +13,7 @@ const dessertSchema = new Schema ({
         default: 'Sin frosting'
 },
     price: Number,
-    _order: {type: Schema.Types.ObjectId, ref: 'Order'},
+    // _order: {type: Schema.Types.ObjectId, ref: 'Order'},
     _toppings: [{type: Schema.Types.ObjectId, ref: 'Topping'}]
 });
 

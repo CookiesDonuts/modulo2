@@ -1,1 +1,35 @@
-<div>Hola</div>
+<h3>{{user}}</h3>
+
+<form action="/order" method="post">
+<div>
+  <label for="base">Tipo</label>
+  <select name="base" id="">
+    <option value=""></option>
+    <option value="Galleta">Galleta</option>
+    <option value="Dona">Dona</option>
+    <option value="Panqué">Panqué</option>
+  </select>
+</div>
+<div>
+  <label for="frosting">Frosting</label>
+  <select name="frosting" id="">
+    <option value="Sin frosting">Sin frosting</option>
+    <option value="Tradicional">Tradicional</option>
+    <option value="Chocolate">Chocolate</option>
+    <option value="Fresa">Fresa</option>
+  </select>
+</div>
+
+<div>
+  <label for="toppings">Toppings</label>
+  <select name="toppings" multiple>
+  {{#each toppings}}
+    <option value={{this._id}}>{{this.name}}</option>
+  {{/each}}
+</select>
+</div>
+
+<button type="submit">Ordenar</button>
+</form>
+
+
