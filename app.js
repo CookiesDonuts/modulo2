@@ -41,6 +41,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+
+
+
 // Express View engine setup
 
 app.use(require('node-sass-middleware')({
@@ -64,8 +67,10 @@ app.locals.title = 'Fudge Yeah!';
 
 const index = require('./routes/index');
 const auth = require("./routes/auth");
+const profile = require("./routes/profile");
 app.use('/', index);
 app.use("/auth", auth);
+app.use("/profile", profile);
 
 
 module.exports = app;
