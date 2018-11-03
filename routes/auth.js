@@ -20,8 +20,8 @@ router.get("/signup", (req, res) => {
 
 router.post("/signup", (req, res) => {
   if(req.body.password !== req.body["password-confirm"]) return res.render("signup", {msg: "Las contraseñas no coinciden"});
-  const {username, email, password} = req.body;
-  User.register({username, email}, password)
+  const {username, email, password, address, phone, name, lastname} = req.body;
+  User.register({username, email, address, phone, name, lastname}, password)
       .then(user => {
           const options = {
               email: user.email,

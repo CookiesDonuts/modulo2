@@ -1,40 +1,41 @@
 
 <h3>Actualiza tus datos</h3>
 
+
 <form action="/profile/{{user._id}}/edit" method="post">
 
     <div>
-        <label for="">
+        <label for="name">
             Nombre:
-            <input type="text" name="name">
+            <input value={{user.name}} type="text" name="name">
         </label>
     </div>
     <div>
-        <label for="">
+        <label for="lastname">
             Apellido:
-            <input type="text" name="lastname">
+            <input value={{user.lastname}} type="text" name="lastname">
         </label>
     </div>
     <div>
-        <label for="">
+        <label for="address">
             Dirección:
-            <input type="text" name="address">
+            <input value={{user.address}} type="text" name="address">
         </label>
     </div>
 
   
   <div>
-        <label for="">
+        <label for="phone">
            Número telefónico:
-            <input type="text" name="phone">
+            <input value={{user.phone}} type="text" name="phone">
         </label>
     </div>
 
 
   <div>
-        <label for="">
+        <label for="email">
             Correo electrónico:
-            <input type="email" name="email">
+            <input value={{user.email}} type="email" name="email">
         </label>
     </div>
 

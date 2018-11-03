@@ -68,9 +68,13 @@ app.locals.title = 'Fudge Yeah!';
 const index = require('./routes/index');
 const auth = require("./routes/auth");
 const profile = require("./routes/profile");
+const checkout = require("./routes/checkout");
+const order = require("./routes/order");
 app.use('/', index);
 app.use("/auth", auth);
 app.use("/", profile);
+app.use('/', checkout);
+app.use('/', order);
 
 
 module.exports = app;

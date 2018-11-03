@@ -1,56 +1,56 @@
 <form action="/auth/signup" method="post">
-
+    <div>{{user}}</div>
     <div>
-        <label for="">
+        <label for="username">
             Usuario:
-            <input value="{{user.username}}" type="text" name="username" required>
+            <input type="text" name="username" required>
         </label>
     </div>
 
     <div>
-        <label for="">
+        <label for="email">
             Correo electrónico:
-            <input value="{{user.email}}" type="email" name="email" required>
+            <input type="email" name="email" required>
         </label>
     </div>
 
     <div>
-        <label for="">
+        <label for="name">
             Nombre:
-            <input value="{{user.name}}" type="text" name="name" required>
+            <input type="text" name="name" required>
         </label>
     </div>
     <div>
-        <label for="">
+        <label for="lastname">
             Apellido:
-            <input value="{{user.lastname}}" type="text" name="lastname" required>
+            <input type="text" name="lastname" required>
         </label>
     </div>
     <div>
-        <label for="">
+        <label for="address">
             Dirección:
-            <input value="{{user.address}}" type="text" name="address" required>
+            <input type="text" name="address" required>
         </label>
     </div>
 
   
   <div>
-        <label for="">
+        <label for="phone">
            Número telefónico:
-            <input value="{{user.phone}}" type="text" name="phone">
+            <input type="text" name="phone">
         </label>
     </div>
 
 
     <div>
-        <label for="">
+        <label for="password">
             Contraseña:
-            <input value="{{user.password}}" type="password" name="password" required>
+            <input type="password" name="password" required>
         </label>
     </div>
 
     <div>
-        <label for="">
+        <label for="password-confirm">
             Confirmar contraseña:
             <input type="password" name="password-confirm" required>
         </label>
