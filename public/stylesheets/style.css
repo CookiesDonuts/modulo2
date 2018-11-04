@@ -1,8 +1,70 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+  padding: 0px;
+  font-size: 12px; }
 
-a {
-  color: #00B7FF; }
+nav {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Source Code Pro", monospace;
+  font-size: 12px; }
+
+header {
+  background-color: #B5D3CC; }
+
+li {
+  list-style-type: none;
+  cursor: pointer; }
+
+main {
+  margin: 50px; }
+
+.logo {
+  height: 800px;
+  background-color: #B5D3CC;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+/* logo*/
+.logo-intro {
+  height: 450px;
+  width: 450px; }
+
+.cuerpo {
+  margin: 50px; }
+
+footer {
+  padding: 60px 100px 20px;
+  background: #B5D3CC;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 11px;
+  letter-spacing: 6px;
+  line-height: 50px;
+  position: relative; }
+
+a:link {
+  color: darkgray; }
+
+/* visited link */
+a:visited {
+  color: darkgrey !important; }
+
+/* mouse over link */
+a:hover {
+  color: #ffc0c8 !important;
+  text-decoration: line-through !important; }
+
+/* selected link */
+a:active {
+  color: #ffc0c8 !important; }
+
+.logo-footer {
+  height: 200px;
+  width: 200px;
+  position: 0; }
+
+.dona-footer {
+  height: 100px; }
 
 /*# sourceMappingURL=style.css.map */
