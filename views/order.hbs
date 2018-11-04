@@ -24,12 +24,36 @@
   <label for="toppings">Toppings</label>
   <select name="toppings" multiple>
   {{#each toppings}}
-    <option value={{this._id}}>{{this.name}}</option>
+    <option class="toppings" value={{this._id}}>{{this.name}} <span class="prices" style="display:none;">{{this.price}}</span></option>
   {{/each}}
 </select>
 </div>
-
+<div>
+  <span id="priceText">0</span>
+  <input style="display:none;" id="price" type="number" name="price" value="">
+</div>
 <button type="submit">Ordenar</button>
 </form>
 
+<script>
+  var toppings = document.querySelectorAll('.toppings');
+  console.log(toppings);
+  var prices  = [];
+  var total = 0;
+  toppings.forEach((topping)=>{
+    topping.addEventListener("click", () => {
+      if(topping.selected) {
+      var price = topping.innerHTML.slice(-2);
+      prices.push(parseInt(price));
+      total = prices.reduce((sum, val)=>{
+        return sum + val;
+      });
+      document.querySelector('#priceText').innerHTML = total;
+      document.querySelector('#price').value = total;
+      console.log(total);
+
+      }
+    })
+  })
+</script>
 
