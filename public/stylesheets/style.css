@@ -6,10 +6,14 @@ nav {
   display: flex;
   justify-content: space-between;
   font-family: "Source Code Pro", monospace;
-  font-size: 12px; }
+  font-size: 12px;
+  width: 100% !important; }
 
 header {
-  background-color: #B5D3CC; }
+  background-color: #B5D3CC;
+  display: flex;
+  flex-direction: column;
+  top: 100px; }
 
 li {
   list-style-type: none;
@@ -31,7 +35,27 @@ main {
   width: 450px; }
 
 .cuerpo {
-  margin: 50px; }
+  margin: 0px; }
+
+.subtitles {
+  font-family: "Source Code Pro", monospace;
+  font-weight: 600;
+  font-size: 20px;
+  color: white;
+  background-color: #ecbeb7;
+  padding-left: 8%;
+  letter-spacing: 4px; }
+
+h3 {
+  font-family: "Source Code Pro", monospace !important;
+  font-weight: 400 !important;
+  font-size: 22px;
+  color: #ecbeb7 !important;
+  letter-spacing: 1px; }
+
+p {
+  font-size: 16px;
+  line-height: 40px; }
 
 footer {
   padding: 60px 100px 20px;
@@ -52,19 +76,41 @@ a:visited {
 
 /* mouse over link */
 a:hover {
-  color: #ffc0c8 !important;
+  color: #ecbeb7 !important;
   text-decoration: line-through !important; }
 
 /* selected link */
 a:active {
-  color: #ffc0c8 !important; }
+  color: #ecbeb7 !important; }
+
+.dona-footer {
+  height: 80px;
+  position: absolute;
+  right: 60px;
+  top: calc(100% - 342px); }
 
 .logo-footer {
   height: 200px;
   width: 200px;
-  position: 0; }
+  right: 0;
+  display: flex;
+  align-items: flex-end; }
 
-.dona-footer {
-  height: 100px; }
+.arrow {
+  width: 30px;
+  display: flex;
+  align-items: end; }
+
+.footer-log {
+  display: flex;
+  justify-content: space-between; }
+
+.uk-card-media-top {
+  margin: auto;
+  width: 60%;
+  height: 60%; }
+
+.tabla-precios {
+  margin: 8%; }
 
 /*# sourceMappingURL=style.css.map */

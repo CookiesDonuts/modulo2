@@ -1,11 +1,12 @@
 
 <header class="logo">
     <img src="./images/fudgeyeah_logo.svg" alt="FUDGE YEAH!" class="logo-intro">
+    <img src="./images/arrow.svg" alt="ve abajo" class="arrow">
 </header>
 
 
 <main class="cuerpo">
-    <nav class="uk-card uk-card-body" style="z-index: 1020;padding: 20px 40px; background:#fff" uk-sticky="top: #offset">
+    <nav class="uk-card uk-card-body" style="z-index: 1020; padding: 15px; background:#fff" uk-sticky="top: #offset">
         <a href="">PRODUCTOS</a>
         <a href="">PROMOCIONES</a>
         <a href="">ARMA TU ORDEN</a>
@@ -13,12 +14,141 @@
         <a href="">INICIA SESIÓN</a>
         <a href="">REGÍSTRATE</a>
     </nav>
-
-    <img src="./images/como_funciona.png" alt="Cómo funciona" class="img-how">
 </main>
 
+<section>
+    <div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow>
+
+        <ul class="uk-slideshow-items">
+            <li>
+                <img src="images/hiw_donuts.png" alt="how it works donas">
+            </li>
+            <li>
+                <img src="images/hiw_cookies.png" alt="how it works galletas">
+            </li>
+            <li>
+                <img src="images/hiw_muffins.png" alt="how it works muffins">
+            </li>
+        </ul>
+
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+    </div>
+
+</section>
+
+<section>
+    <span class="subtitles">TOPPINGS</span>
+    <div uk-slider="center: true">
+
+        <div class="uk-position-relative uk-visible-toggle uk-light">
+
+            <ul class="uk-slider-items uk-child-width-1-2@s uk-grid">
+                <li>
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="images/toppings/chocochips.png" alt="chocochips">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Chispas de chocolate</h3>
+                            <p>Las tradicionales chispas de chocolate, hechas con chocolate de Oaxaca. Es una opción segura y deliciosa.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="images/toppings/bears.png" alt="Panditas">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Panditas</h3>
+                            <p>Disculpe joven, hay unos panditas en mi postre. Exactamente, no creerás el sabor que agregan estos pequeños osos de colores.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="images/toppings/m&ms.png" alt="M&M's">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">M&M's</h3>
+                            <p>Esta opción es de las... ñam, ya se me hizo agua la boca, tienes que probarlas.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="images/toppings/pretzels.png" alt="Pretzels">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Pretzels</h3>
+                            <p>La combinación de los dulce con lo saldado es de lo mejor que puedes probar para munchear. </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="images/toppings/frootloops.png" alt="Froot Loops">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Froot Loops</h3>
+                            <p>El cereal no sólo va con leche, también se lleva bien con tu postre favorito. Los recomendamos en los muffins.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="images/toppings/sprinkles.png" alt="Chispas de colores">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Chispas de colores</h3>
+                            <p>Así como cuando vas a la feria a pedir tus hot cakes con chispas de colores, este es también uno de los clásicos de tu infancia.</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+        </div>
+
+        <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+    </div>
+</section>
+<span class="subtitles">PRECIOS</span>
+
+<section class="tabla-precios">
+    <table class="uk-table uk-table-justify uk-table-divider">
+        <thead>
+        <tr>
+            <th class="uk-width-small">POSTRE</th>
+            <th>PRECIO</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>12 galletas</td>
+            <td>El pedido mínimo de galletas es de 12 piezas de un mismo sabor. El precio inicial es de $140.</td>
+            <td><button class="uk-button uk-button-default" type="button">Quiero galletas</button></td>
+        </tr>
+        <tr>
+            <td>6 donas</td>
+            <td>El pedido mínimo de donas es de 6 por el precio inicial de $150.</td>
+            <td><button class="uk-button uk-button-default" type="button">Quiero donas</button></td>
+        </tr>
+        <tr>
+            <td>6 muffins</td>
+            <td>Igual que las donas, el pedido mínimo de muffins es de 6 por el precio inicial de $150.</td>
+            <td><button class="uk-button uk-button-default" type="button">Quiero muffins</button></td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+
 <div class=" "></div>
-
-
-
-<!--<h1>{{title}}</h1>-->
