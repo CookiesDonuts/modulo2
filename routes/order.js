@@ -20,8 +20,7 @@ router.get("/order", isLoggedIn, (req, res) => {
 });
 
 router.post("/order", isLoggedIn, (req, res) => {
-  console.log(req.body);
-  console.log(req.body.toppings);
+  
   const newDessert = new Dessert ({
     base: req.body.base,
     frosting: req.body.frosting,
@@ -36,7 +35,24 @@ router.post("/order", isLoggedIn, (req, res) => {
     .catch((err) =>{
       console.log(err);
     });
+});
 
+
+router.get("/checkout", isLoggedIn, (req, res) => {
+  const newOrder = new Order ({
+    price: req.body.price,
+    comments: req.body.comments,
+    total: req.body.total,
+    _user: req.body._user
+  });
+
+  newOrder.save()
+    .then(() => {
+      res.redirect("/checkout");
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 });
 
 
