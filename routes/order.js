@@ -12,7 +12,7 @@ function isLoggedIn(req, res, next){
 router.get("/order", isLoggedIn, (req, res) => {
   Topping.find({})
     .then((toppings) => {
-      res.render("order", {toppings});
+      res.render("order", {toppings, user: req.user});
     }) 
     .catch((err) => {
       console.log(err);
@@ -38,10 +38,10 @@ router.post("/order", isLoggedIn, (req, res) => {
 });
 
 
-router.get("/checkout", isLoggedIn, (req, res) => {
+router.post("/checkout", isLoggedIn, (req, res) => {
+
   const newOrder = new Order ({
-    price: req.body.price,
-    comments: req.body.comments,
+    _dessert: req.body._dessert,
     total: req.body.total,
     _user: req.body._user
   });
