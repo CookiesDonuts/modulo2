@@ -1,9 +1,9 @@
-<h3>{{user}}</h3>
+<h3 id="user-id">{{user._id}}</h3>
 
-<form action="/order" method="post">
+<form id="dessert">
 <div>
   <label for="base">Tipo</label>
-  <select name="base" id="">
+  <select name="base" id="base">
     <option value=""></option>
     <option value="Galleta">Galleta</option>
     <option value="Dona">Dona</option>
@@ -12,7 +12,7 @@
 </div>
 <div>
   <label for="frosting">Frosting</label>
-  <select name="frosting" id="">
+  <select name="frosting" id="frosting">
     <option value="Sin frosting">Sin frosting</option>
     <option value="Tradicional">Tradicional</option>
     <option value="Chocolate">Chocolate</option>
@@ -22,7 +22,7 @@
 
 <div>
   <label for="toppings">Toppings</label>
-  <select name="toppings" multiple>
+  <select name="toppings" id="toppings" multiple>
   {{#each toppings}}
     <option class="toppings" value={{this._id}}>{{this.name}} <span class="prices" style="display:none;">{{this.price}}</span></option>
   {{/each}}
@@ -32,14 +32,33 @@
   <span id="priceText">0</span>
   <input style="display:none;" id="price" type="number" name="price" value="">
 </div>
-<button type="submit">Ordenar</button>
+<button onclick="submitform(event)" type="submit">Agregar</button>
 </form>
+
+
+<div id="show-data">
+   {{#each desserts}}
+      <div>
+        <h2>{{this.base}}</h2>
+        <h2>{{this.frosting}}</h2>
+        <h2>{{this.toppings}}</h2>
+        <h2>{{this.price}}</h2>
+      </div>
+   {{/each}}
+
+   <button onclick="saveOrder()" type="submit">Enviar Orden</button>
+</div>
 
 <script>
   var toppings = document.querySelectorAll('.toppings');
   console.log(toppings);
   var prices  = [];
   var total = 0;
+  var desserts = [];
+  var base = document.getElementById("base");
+  var frosting = document.getElementById("frosting");
+  var toppingsSelector = document.getElementById("toppings");
+  var price = document.getElementById("priceText");
   toppings.forEach((topping)=>{
     topping.addEventListener("click", () => {
       if(topping.selected) {
@@ -52,8 +71,94 @@
       document.querySelector('#price').value = total;
       console.log(total);
 
-      }
+      };
+    });
+  });
+    console.log(dessert);
+  function submitform(event) {
+    
+    var toppings = Array.prototype.slice.call(document.querySelectorAll("#toppings option:checked"),0).map((v,i,a)=>{
+      return v.value;
+    });
+    var toppingsName = Array.prototype.slice.call(document.querySelectorAll("#toppings option:checked"),0).map((v,i,a)=>{
+      return v.innerHTML;
+    });
+    var dessert = {
+      base: base.options[base.selectedIndex].value,
+      frosting: frosting.options[frosting.selectedIndex].value,
+      toppings: toppings,
+      toppingsName: toppingsName,
+      price: total
+    };
+    desserts.push(dessert);
+
+    console.log(desserts);
+    cleanInputs();
+    showData(desserts);
+    event.preventDefault();
+  };
+
+  function cleanInputs() {
+     base.value = "";
+     frosting.value = "";
+     toppingsSelector.value = "";
+     total = 0;
+     price.innerHTML = 0;
+  }
+
+  function showData(data) {
+    data.forEach((element)=>{
+      var node = document.createElement("p");
+      var textBase = document.createTextNode(element.base);
+      var textFrosting = document.createTextNode(element.frosting);
+      var textTopping = document.createTextNode(element.toppingsName);
+      node.appendChild(textBase);
+      node.appendChild(textFrosting);
+      node.appendChild(textTopping);
+
+      document.getElementById("show-data").appendChild(node);
     })
-  })
+  };
+
+  function saveOrder() {
+    var userId = document.getElementById("user-id").innerHTML;
+    var dessertIds = [];
+    desserts.forEach(element=>{
+      axios.post('localhost:3000/order', element)
+      .then(response => {
+          dessertIds.push(response._id);
+      })
+      .catch(error => {
+          console.log('Oh No! Error!');  
+          console.log(error)
+      });
+    });
+  
+    var totalOrder = desserts.reduce((sum, val)=>{
+      return sum+=val.price;
+    }, 0);
+    
+    var newOrder = {
+       _dessert: dessertIds,
+       _user: userId,
+      total: totalOrder
+    }
+
+     axios.post('localhost:3000/order', newOrder)
+      .then(response => {
+          console.log('la orden ha sido guardada', response);
+      })
+      .catch(error => {
+          console.log('Oh No! Error!');  
+          console.log(error)
+      });
+  }
+
+console.log(newOrder);
+
+  };
+
+
+
 </script>
 
