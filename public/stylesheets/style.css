@@ -46,6 +46,13 @@ main {
   padding-left: 8%;
   letter-spacing: 4px; }
 
+h1 {
+  font-family: "Source Code Pro", monospace !important;
+  font-weight: 600 !important;
+  font-size: 40px;
+  color: #ecbeb7 !important;
+  letter-spacing: 1px; }
+
 h3 {
   font-family: "Source Code Pro", monospace !important;
   font-weight: 400 !important;
@@ -112,5 +119,24 @@ a:active {
 
 .tabla-precios {
   margin: 8%; }
+
+.cuatrocerocuatro {
+  color: white !important;
+  background-color: #ecbeb7;
+  margin: auto;
+  margin-top: 3%;
+  text-align: center !important; }
+
+.centrado {
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+  text-align: center; }
+
+.galleta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+  margin-bottom: 8%; }
 
 /*# sourceMappingURL=style.css.map */
