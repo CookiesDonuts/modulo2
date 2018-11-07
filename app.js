@@ -70,11 +70,13 @@ const auth = require("./routes/auth");
 const profile = require("./routes/profile");
 const checkout = require("./routes/checkout");
 const order = require("./routes/order");
+const faq = require("./routes/faq")
 app.use('/', index);
 app.use("/auth", auth);
 app.use("/", profile);
 app.use('/', checkout);
 app.use('/', order);
+app.use('/faq', faq);
 
 
 module.exports = app;

@@ -15,6 +15,7 @@ header{
   background-color: #B5D3CC;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   top: 100px;
 }
 
@@ -31,9 +32,9 @@ main{
   height: 800px;
   background-color: #B5D3CC;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
+
 /* logo*/
 .logo-intro{
   height: 450px;
@@ -128,7 +129,14 @@ a:active {
   width:30px;
   display: flex;
   align-items: end;
+  animation-name: pulse_animation;
+  animation-duration: 5000ms;
+  transform-origin: 70% 70%;
+  animation-iteration-count: infinite;
+  animation-timing-function:linear;
+  top: 50px;
 }
+
 
 .footer-log{
   display: flex;
@@ -178,4 +186,28 @@ nav{
   z-index: 1020;
  padding: 0 !important;
   background:#fff;
+}
+
+@keyframes pulse_animation {
+  0% { transform: scale(1); }
+  30% { transform: scale(1); }
+  40% { transform: scale(1.3); }
+  50% { transform: scale(1); }
+  60% { transform: scale(1); }
+  70% { transform: scale(1.3); }
+  80% { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+
+.titulo-aviso{
+  font-family: "Source Code Pro", monospace !important;
+  font-weight: 600 !important;
+  font-size: 22px !important;
+  color: #ecbeb7 !important;
+  letter-spacing: 0.1px !important;
+}
+
+.texto-aviso{
+  font-size: 12px;
+  line-height: 25px;
 }
