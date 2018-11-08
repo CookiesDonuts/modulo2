@@ -53,6 +53,7 @@ main{
   background-color: #ecbeb7;
   padding-left: 8%;
   letter-spacing: 4px;
+  margin-top: 3%;
 }
 
 h1{
@@ -210,4 +211,28 @@ nav{
 .texto-aviso{
   font-size: 12px;
   line-height: 25px;
+}
+
+b:link {
+  color: darkgray;
+}
+
+/* visited link */
+b:visited {
+  color: darkgrey !important;
+}
+
+/* mouse over link */
+b:hover {
+  color: white !important;
+  text-decoration: line-through!important;
+}
+
+/* selected link */
+b:active {
+  color: white !important;
+}
+
+.promos{
+  margin-top: 5%;
 }

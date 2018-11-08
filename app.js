@@ -71,12 +71,14 @@ const profile = require("./routes/profile");
 const checkout = require("./routes/checkout");
 const order = require("./routes/order");
 const faq = require("./routes/faq")
+const promos = require("./routes/promos")
 app.use('/', index);
 app.use("/auth", auth);
 app.use("/", profile);
 app.use('/', checkout);
 app.use('/', order);
 app.use('/faq', faq);
+app.use('/promos', promos);
 
 
 module.exports = app;
