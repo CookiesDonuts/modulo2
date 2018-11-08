@@ -205,5 +205,27 @@ b:active {
 .promos {
   margin-top: 5%; }
   
-  
+#form-signup {
+    margin-top: -15px !important;
+}
+
+#form-login {
+    margin-top: 8% !important;
+  }
+
+#button-signup {
+    display: inline-block;
+    align-items: center;
+}
+
+.move-icon {
+    position: fixed;
+    top: 30px !important;
+    left: 12px !important;
+}
+
+.margin-bottom {
+    margin-bottom: 8%;
+}
+
 /*# sourceMappingURL=style.css.map */
