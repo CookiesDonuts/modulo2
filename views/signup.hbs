@@ -1,65 +1,78 @@
-<form action="/auth/signup" method="post">
-    <div>{{user}}</div>
-    <div>
-        <label for="username">
-            Usuario:
-            <input type="text" name="username" required>
-        </label>
+<div  class="uk-section uk-section-muted uk-flex uk-flex-middle uk-animation-fade" uk-height-viewport>
+    <div class="uk-width-1-1">
+        <div class="uk-container" >
+            <div class="uk-grid-margin uk-grid uk-grid-stack">
+                <div class="uk-width-1-1@m">
+                    <div class="uk-margin uk-width-large uk-margin-auto uk-card uk-card-default uk-card-body uk-box-shadow-large" style="width:70%; padding:5%;">
+                       
+                       
+                        <h3 class="uk-card-title uk-text-center">Por favor, completa tu información de registro</h3>
+                      
+                      
+                        <form action="/auth/signup" method="POST" id="form-signup" uk-grid>
+                            
+                                
+                                        <div class="uk-inline uk-width-1-2@s" style="margin-top:10px;">
+                                            <span class="uk-form-icon uk-inline move-icon" uk-icon="icon: user"></span>
+                                            <input placeholder="Usuario" class="uk-input" type="text" name="username" required>
+                                        </div>
+                                    
+                                    
+                                        <div class="uk-inline uk-width-1-2@s" style="margin-top:10px;">
+                                            <span class="uk-form-icon uk-inline move-icon" uk-icon="icon: info"></span>
+                                            <input placeholder="Nombre" class="uk-input" type="text" name="name" required>
+                                        </div>
+                                    
+                                
+                                        <div class="uk-inline uk-width-1-2@s" style="margin-top:10px;">
+                                            <span class="uk-form-icon uk-inline move-icon" uk-icon="icon: mail"></span>
+                                            <input placeholder="Email" class="uk-input" type="email" name="email" required>
+                                        </div>
+                                    
+                                    
+                                        <div class="uk-inline uk-width-1-2@s" style="margin-top:10px;">
+                                            <span class="uk-form-icon uk-inline move-icon" uk-icon="icon: info"></span>
+                                            <input placeholder="Apellido" class="uk-input" type="text" name="lastname" required>
+                                        </div>
+
+                                
+                                        <div class="uk-inline uk-width-1-2@s" style="margin-top:10px;">
+                                            <span class="uk-form-icon uk-inline move-icon" uk-icon="icon: lock"></span>
+                                            <input placeholder="Contraseña" class="uk-input" type="password" name="password" required>
+                                        </div>
+                                    
+                                    
+                                        <div class="uk-inline uk-width-1-2@s" style="margin-top:10px;">
+                                            <span class="uk-form-icon uk-inline move-icon" uk-icon="icon: location"></span>
+                                            <input placeholder="Dirección" class="uk-input" type="text" name="address" required>
+                                        </div>
+                                    
+                                    
+                                        <div class="uk-inline uk-width-1-2@s" style="margin-top:10px;">
+                                            <span class="uk-form-icon uk-inline move-icon" uk-icon="icon: lock"></span>
+                                            <input placeholder="Confirmar Contraseña" class="uk-input" type="password" name="password-confirm" required>
+                                        </div>
+                                    
+                                    
+                                        <div class="uk-inline uk-width-1-2@s" style="margin-top:10px;">
+                                            <span class="uk-form-icon uk-inline move-icon" uk-icon="icon: phone"></span>
+                                            <input placeholder="Teléfono" class="uk-input" type="text" name="phone">
+                                        </div>
+                            
+
+
+                            <div class="uk-margin uk-width-1-1" style="display: flex; justify-content:center">
+                                <button type="submit" class="uk-button uk-button-primary uk-button-medium uk-width-1-4@s">Registrarse</button>
+                            </div>
+                            <div class="uk-text-small uk-text-center uk-width-1-1" style="display: flex; justify-content:center; margin-top:0;">
+                                ¿Ya estás registrado? <a href="/auth/login">Inicia sesión</a>
+                            </div>
+                       </form>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div>
-        <label for="email">
-            Correo electrónico:
-            <input type="email" name="email" required>
-        </label>
-    </div>
-
-    <div>
-        <label for="name">
-            Nombre:
-            <input type="text" name="name" required>
-        </label>
-    </div>
-    <div>
-        <label for="lastname">
-            Apellido:
-            <input type="text" name="lastname" required>
-        </label>
-    </div>
-    <div>
-        <label for="address">
-            Dirección:
-            <input type="text" name="address" required>
-        </label>
-    </div>
-
-  
-  <div>
-        <label for="phone">
-           Número telefónico:
-            <input type="text" name="phone">
-        </label>
-    </div>
-
-
-    <div>
-        <label for="password">
-            Contraseña:
-            <input type="password" name="password" required>
-        </label>
-    </div>
-
-    <div>
-        <label for="password-confirm">
-            Confirmar contraseña:
-            <input type="password" name="password-confirm" required>
-        </label>
-    </div>
-
-    <div>
-        <button type="submit">Registrarse</button>
-    </div>
-
-
-
-</form>
+</div>
