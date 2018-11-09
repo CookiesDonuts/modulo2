@@ -236,13 +236,23 @@ b:active {
   background-color: #ecbeb7 !important;
   color: white !important;
   border-style: hidden !important;
+  padding: 5px 70px !important;
+  width: 250px !important;
   font-size: 12px !important; }
 
 .boton-home:hover {
-  background-color: #ecbeb7 !important;
-  text-decoration: line-through !important;
+  text-decoration: line-through !important; }
+
+.boton-form {
+  background-color: #B5D3CC !important;
   color: white !important;
-  border-style: hidden !important; }
+  border-style: hidden !important;
+  padding: 5px 70px !important;
+  width: 250px !important;
+  font-size: 12px !important; }
+
+.boton-form:hover {
+  text-decoration: line-through !important; }
 
 .menu-index {
   font-family: "Source Code Pro", monospace !important;
@@ -281,7 +291,7 @@ b:active {
   font-family: 'Raleway', sans-serif;
   color: white;
   font-size: 14px;
-  padding: 15px 80px;
+  padding: 12px 80px;
   border-style: hidden; }
 
 .boton-enviar:hover {

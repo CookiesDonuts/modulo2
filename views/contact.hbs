@@ -1,10 +1,7 @@
 
 {{> navbar user}}
-<<!--Manuel-->>
-<br><br><br><br>
-<span class="subtitles">CUÉNTANOS LO QUE QUIERAS</span>
 
-<section class="uk-container form-container">
+<!--<section class="uk-container form-container">
 
     <div class="uk-width-1-1 uk-flex uk-flex-center uk-flex-middle uk-height-1-1">
         <form class="uk-form-stacked uk-width-1-2">
@@ -12,35 +9,69 @@
             <div class="uk-margin">
                 <label class="uk-form-label" for="form-stacked-text">Nombre</label>
                 <div class="uk-form-controls">
-                    <input class="uk-input uk-form-large" id="form-stacked-text" type="text" placeholder="ej. Pedro Parker">
+                    <input class="uk-input uk-form-large" id="form-stacked-text" type="text" placeholder="ej. Pepe Pecas">
                 </div>
             </div>
 
             <div class="uk-margin">
                 <label class="uk-form-label" for="form-stacked-text">Correo</label>
                 <div class="uk-form-controls">
-                    <input class="uk-input uk-form-large" id="form-stacked-text" type="email" placeholder="ej. pedro@parker.com">
+                    <input class="uk-input uk-form-large" id="form-stacked-text" type="email" placeholder="ej. pepe@pecas.com">
                 </div>
             </div>
 
             <div class="uk-margin">
                 <textarea class="uk-textarea uk-form-large" rows="5" placeholder="Cuéntanos algo..."></textarea>
             </div>
-            <button type="button" class="boton-enviar" > Enviar </button>
+            <button type="button" class="boton-form" > Enviar </button>
         </form>
     </div>
 
+</section>-->
+<section class="form-container">
+<div  class="uk-section uk-section-muted uk-flex uk-flex-middle uk-animation-fade" uk-height-viewport>
+    <div class="uk-width-1-1">
+        <div class="uk-container" >
+            <div class="uk-grid-margin uk-grid uk-grid-stack">
+                <div class="uk-width-1-1@m">
+                    <div class="uk-margin uk-width-large uk-margin-auto uk-card uk-card-default uk-card-body uk-box-shadow-medium">
+
+
+                        <h3 class="uk-card-title uk-text-center" style="margin-bottom: ">Cuéntanos lo que quieras</h3>
+
+                        <form action="/auth/login" method="POST" id="form-login">
+
+
+                            <div class="uk-margin">
+                                <label class="" for="form-stacked-text">Nombre</label>
+                                <div class="uk-form-controls">
+                                    <input placeholder="ej. Pepe Pecas" class="uk-input" type="text">
+                                </div>
+
+                                <div class="uk-margin">
+                                    <label class="" for="form-stacked-text">Correo electrónico</label>
+                                    <div class="uk-form-controls">
+                                        <input placeholder="ej. pepepecas@fudgeyeah.com" class="uk-input" type="email">
+                                    </div>
+
+                                    <div class="uk-margin">
+                                        <textarea placeholder="Cuéntanos algo..." class="uk-textarea uk-form-large" rows="5" type="text"></textarea>
+                                    </div>
+
+
+                            <div class="uk-margin" style="display: flex; justify-content:center">
+                                <button type="submit" class="uk-button uk-button-primary uk-button-medium uk-width-1-2@s boton-form">Iniciar Sesión</button>
+                            </div>
+                            <div class="uk-text-small uk-text-center">
+                                ¿No estás registrado? <a href="/auth/signup">Crea una cuenta</a>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </section>
-
-
-<form action="/contact" method="GET">
-    <script
-            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-            data-key="pk_test_epuiqKESrji9Ae5A3KlGduyb"
-            data-amount="999"
-            data-name="Fudge Yeah"
-            data-description="Your payment"
-            data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-            data-locale="auto">
-    </script>
-</form>
