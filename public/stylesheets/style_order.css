@@ -1,0 +1,26 @@
+div#order {
+  display: flex;
+  width: 100%;
+}
+
+form#dessert {
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+};
+
+.main-order {
+  width: 70%;
+  
+  
+};
+
+.main-check{
+  width: 30%;
+  display: flex;
+  justify-content: right;
+};
+
+body{
+  background-color: red;
+}
