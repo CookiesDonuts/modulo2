@@ -274,6 +274,17 @@ b:active {
   min-width: 50px; }
 
 .form-container {
-  height: calc(100vh - 60px); }
+  height: calc(100vh - 200px); }
+
+.boton-enviar {
+  background-color: #B5D3CC;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  font-size: 14px;
+  padding: 15px 80px;
+  border-style: hidden; }
+
+.boton-enviar:hover {
+  text-decoration: line-through !important; }
 
 /*# sourceMappingURL=style.css.map */

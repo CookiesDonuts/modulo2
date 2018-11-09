@@ -1,6 +1,9 @@
 
 {{> navbar user}}
 
+<br><br><br><br>
+<span class="subtitles">CUÉNTANOS LO QUE QUIERAS</span>
+
 <section class="uk-container form-container">
 
     <div class="uk-width-1-1 uk-flex uk-flex-center uk-flex-middle uk-height-1-1">
@@ -16,15 +19,28 @@
             <div class="uk-margin">
                 <label class="uk-form-label" for="form-stacked-text">Correo</label>
                 <div class="uk-form-controls">
-                    <input class="uk-input uk-form-large" id="form-stacked-text" type="email" placeholder="ej example@example.com">
+                    <input class="uk-input uk-form-large" id="form-stacked-text" type="email" placeholder="ej. pedro@parker.com">
                 </div>
             </div>
 
             <div class="uk-margin">
-                <textarea class="uk-textarea uk-form-large" rows="5" placeholder="Mensaje..."></textarea>
+                <textarea class="uk-textarea uk-form-large" rows="5" placeholder="Cuéntanos algo..."></textarea>
             </div>
-
+            <button type="button" class="boton-enviar" > Enviar </button>
         </form>
     </div>
 
 </section>
+
+
+<form action="/contact" method="GET">
+    <script
+            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="pk_test_epuiqKESrji9Ae5A3KlGduyb"
+            data-amount="999"
+            data-name="Fudge Yeah"
+            data-description="Your payment"
+            data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+            data-locale="auto">
+    </script>
+</form>
