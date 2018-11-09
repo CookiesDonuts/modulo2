@@ -233,6 +233,91 @@ b:active {
   color: white !important;
 }
 
+.faq-page:link {
+  color: white;
+  font-weight: 600;
+
+}
+
+/* visited link */
+.faq-page:visited {
+  color: white !important;
+  font-weight: 600;
+}
+
+/* mouse over link */
+.faq-page:hover {
+  color: white !important;
+  text-decoration: line-through!important;
+}
+
+/* selected link */
+.faq-page:active {
+  color: white !important;
+}
+
 .promos{
   margin-top: 5%;
+}
+
+.faq{
+  padding: 60px 100px 20px;
+  color:#fff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 11px;
+  letter-spacing: 6px;
+  line-height: 50px;
+  position: relative;
+}
+
+.boton-home{
+  background-color: #ecbeb7 !important;
+  color: white !important;
+  border-style: hidden !important;
+  font-size: 12px !important;
+}
+
+.boton-home:hover{
+  background-color: #ecbeb7 !important;
+  text-decoration: line-through!important;
+  color: white !important;
+  border-style: hidden !important;
+}
+
+.menu-index{
+  font-family: "Source Code Pro", monospace !important;
+  font-weight: 600 !important;
+  font-size: 22px !important;
+  color: #ecbeb7 !important;
+  letter-spacing: 1px;
+}
+
+.menu-bold{
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 50px;
+}
+
+.menu-description{
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 50px;
+}
+
+.productos-home{
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px !important;
+  color: darkgray !important;
+  font-weight: 400 !important;
+  line-height: 50px !important;
+}
+
+.cuerpo > nav a{
+  min-width: 50px;
+}
+
+.form-container {
+  height: calc(100vh - 60px);
 }

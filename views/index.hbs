@@ -4,18 +4,7 @@
     <img src="./images/arrow.svg" alt="ve abajo" class="arrow">
 </header>
 
-
-<main class="cuerpo">
-    <nav class="uk-card uk-card-body"  uk-sticky="top: #offset">
-        <a href="/products">PRODUCTOS</a>
-        <a href="/promos">PROMOCIONES</a>
-        <a href="/order">ARMA TU ORDEN</a>
-        <a href="/"><img src="./images/fy_logo.svg" alt="FY!" class="logomenu"></a>
-        <a href="/contact">CONTACTO</a>
-        <a href="/auth/login">INICIA SESIÓN</a>
-        <a href="/auth/signup">REGÍSTRATE</a>
-    </nav>
-</main>
+{{> navbar user}}
 
 <section>
     <div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow>
@@ -39,7 +28,8 @@
 </section>
 
 <section>
-    <span class="subtitles">TOPPINGS</span>
+    <span class="subtitles">NUESTROS TOPPINGS MÁS PEDIDOS</span>
+    <br><br><br>
     <div uk-slider="center: true">
 
         <div class="uk-position-relative uk-visible-toggle uk-light">
@@ -52,7 +42,7 @@
                         </div>
                         <div class="uk-card-body">
                             <h3 class="uk-card-title">Chispas de chocolate</h3>
-                            <p>Las tradicionales chispas de chocolate, hechas con chocolate de Oaxaca. Es una opción segura y deliciosa.</p>
+                            <p class=productos-home">Las tradicionales chispas de chocolate, hechas con chocolate de Oaxaca. Es una opción segura y deliciosa.</p>
                         </div>
                     </div>
                 </li>
@@ -128,25 +118,25 @@
     <table class="uk-table uk-table-justify uk-table-divider">
         <thead>
         <tr>
-            <th class="uk-width-small">POSTRE</th>
-            <th>PRECIO</th>
+            <th class="uk-width-small menu-index">POSTRE</th>
+            <th class="menu-index">PRECIO</th>
         </tr>
         </thead>
         <tbody>
         <tr>
-            <td>12 galletas</td>
-            <td>El pedido mínimo de galletas es de 12 piezas de un mismo sabor. El precio inicial es de $140.</td>
-            <td><button class="uk-button uk-button-default" type="button">Quiero galletas</button></td>
+            <td class="menu-bold">12 galletas</td>
+            <td class="menu-description">El pedido mínimo de galletas es de 12 piezas de un mismo sabor. El precio inicial es de $140.</td>
+            <td><button class="uk-button uk-button-default boton-home" type="button">Quiero galletas</button></td>
         </tr>
         <tr>
-            <td>6 donas</td>
-            <td>El pedido mínimo de donas es de 6 por el precio inicial de $150.</td>
-            <td><button class="uk-button uk-button-default" type="button">Quiero donas</button></td>
+            <td class="menu-bold">6 donas</td>
+            <td class="menu-description">El pedido mínimo de donas es de 6 por el precio inicial de $150.</td>
+            <td><button class="uk-button uk-button-default boton-home" type="button">Quiero donas</button></td>
         </tr>
         <tr>
-            <td>6 muffins</td>
-            <td>Igual que las donas, el pedido mínimo de muffins es de 6 por el precio inicial de $150.</td>
-            <td><button class="uk-button uk-button-default" type="button">Quiero muffins</button></td>
+            <td class="menu-bold">6 muffins</td>
+            <td class="menu-description">Igual que las donas, el pedido mínimo de muffins es de 6 por el precio inicial de $150.</td>
+            <td><button class="uk-button uk-button-default boton-home" type="button">Quiero muffins</button></td>
         </tr>
         </tbody>
     </table>

@@ -1,0 +1,11 @@
+{{> navbar user}}
+
+<section class="uk-container">
+
+    <article class="uk-grid uk-grid-match uk-grid-small" uk-grid>
+        {{#each products as |p| }}
+            {{> product p}}
+        {{/each}}
+    </article>
+
+</section>

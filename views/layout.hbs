@@ -11,18 +11,6 @@
 </head>
 <body>
 
-    <main class="cuerpo">
-        <nav class="uk-card uk-card-body"  uk-sticky="top: #offset">
-            <a href="/products">PRODUCTOS</a>
-            <a href="/promos">PROMOCIONES</a>
-            <a href="/order">ARMA TU ORDEN</a>
-            <a href="/"><img src="./images/fy_logo.svg" alt="FY!" class="logomenu"></a>
-            <a href="/contact">CONTACTO</a>
-            <a href="/auth/login">INICIA SESIÓN</a>
-            <a href="/auth/signup">REGÍSTRATE</a>
-        </nav>
-    </main>
-
 {{{body}}}
 
 <footer>
@@ -32,8 +20,8 @@
         <div>
             <li><b uk-toggle="target: #modal-close-default" href="">AVISO DE PRIVACIDAD</b></li>
             <li><b uk-toggle="target: #modal-container" uk-toggle href="">TÉRMINOS Y CONDICIONES</b></li>
-            <li><b href="/faq">FAQ</b></li>
-            <li><b href="">CONTACTO</b></li>
+            <li><a href="/faq" class="faq-page">FAQ</a></li>
+            <li><a href="/contact" class="faq-page">CONTACTO</a></li>
         </div>
         <img src="/images/fudgeyeah_logo_footer.svg" alt="Fudge Yeah! logo" class="logo-footer">
     </div>
@@ -132,11 +120,10 @@
     </div>
 </div>
 
-
-
 <script src="/javascripts/script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.20/js/uikit.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.20/js/uikit-icons.min.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
 </body>
 </html>
