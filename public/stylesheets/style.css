@@ -44,8 +44,7 @@ main {
   color: white;
   background-color: #ecbeb7;
   padding-left: 8%;
-  letter-spacing: 4px;
-  margin-top: 3%; }
+  letter-spacing: 4px; }
 
 h1 {
   font-family: "Source Code Pro", monospace !important;
@@ -271,7 +270,7 @@ b:active {
   font-family: 'Raleway', sans-serif;
   font-size: 14px;
   font-weight: 400;
-  line-height: 50px; }
+  line-height: 35px; }
 
 .productos-home {
   font-family: 'Raleway', sans-serif;
@@ -296,5 +295,8 @@ b:active {
 
 .boton-enviar:hover {
   text-decoration: line-through !important; }
+
+.order-home {
+  color: white !important; }
 
 /*# sourceMappingURL=style.css.map */

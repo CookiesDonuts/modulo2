@@ -53,7 +53,6 @@ main{
   background-color: #ecbeb7;
   padding-left: 8%;
   letter-spacing: 4px;
-  margin-top: 3%;
 }
 
 h1{
@@ -315,7 +314,7 @@ b:active {
   font-family: 'Raleway', sans-serif;
   font-size: 14px;
   font-weight: 400;
-  line-height: 50px;
+  line-height: 35px;
 }
 
 .productos-home{
@@ -345,4 +344,8 @@ b:active {
 
 .boton-enviar:hover{
   text-decoration: line-through!important;
+}
+
+.order-home{
+  color:white !important;
 }
