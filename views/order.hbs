@@ -1,3 +1,5 @@
+{{> navbar user}}
+
 <h3 id="user-id">{{user._id}}</h3>
 
 <form id="dessert">
@@ -37,14 +39,14 @@
 
 
 <div id="show-data">
-   {{#each desserts}}
+   {{!-- {{#each desserts}}
       <div>
         <h2>{{this.base}}</h2>
         <h2>{{this.frosting}}</h2>
         <h2>{{this.toppings}}</h2>
         <h2>{{this.price}}</h2>
       </div>
-   {{/each}}
+   {{/each}} --}}
 
    <button onclick="saveOrder()" type="submit">Enviar Orden</button>
 </div>
@@ -107,8 +109,22 @@
   }
 
   function showData(data) {
+    console.log("data",data)
+    var divData = document.getElementById("show-data");
+    var arrayDivs = ''
     data.forEach((element)=>{
-      var node = document.createElement("p");
+      const hola = `<div>
+        <h2>${element.base}</h2>
+        <h2>${element.frosting}</h2>
+        <h2>${element.toppings}</h2>
+        <h2>${element.price}</h2>
+      </div>`
+      arrayDivs += hola;
+    })
+    divData.innerHTML = arrayDivs
+    //ivData.innerHTML += createItemNode();
+   /* data.forEach((element)=>{
+      var node = document.createElement("p"); 
       var textBase = document.createTextNode(element.base);
       var textFrosting = document.createTextNode(element.frosting);
       var textTopping = document.createTextNode(element.toppingsName);
@@ -118,6 +134,15 @@
 
       document.getElementById("show-data").appendChild(node);
     })
+*/
+  };
+
+  function createItemNode(){
+    var itemDiv = "";
+    itemDiv = "<div>";
+    itemDiv += "<h1>"+"</h1>";
+    itemDiv += "</div>";
+
   };
 
   function saveOrder() {
