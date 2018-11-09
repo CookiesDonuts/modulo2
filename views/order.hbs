@@ -1,54 +1,69 @@
 {{> navbar user}}
+<br>
+<br>
 
-<h3 id="user-id">{{user._id}}</h3>
+<div id="order">
+  <section class="main-order">
+  <span class="subtitles">ARMA TU ORDEN</span>
+  <form id="dessert">
+  {{!-- <div>
+    <label for="base">Tipo</label>
+    <select name="base" id="base">
+      <option value=""></option>
+      <option value="Galleta">Galleta</option>
+      <option value="Dona">Dona</option>
+      <option value="Panqué">Panqué</option>
+    </select>
+  </div> --}}
+  <div>
 
-<form id="dessert">
-<div>
-  <label for="base">Tipo</label>
-  <select name="base" id="base">
-    <option value=""></option>
-    <option value="Galleta">Galleta</option>
-    <option value="Dona">Dona</option>
-    <option value="Panqué">Panqué</option>
+  </div>
+
+
+
+  <div>
+    <label for="frosting">Frosting</label>
+    <select name="frosting" id="frosting">
+      <option value="Sin frosting">Sin frosting</option>
+      <option value="Tradicional">Tradicional</option>
+      <option value="Chocolate">Chocolate</option>
+      <option value="Fresa">Fresa</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="toppings">Toppings</label>
+    <select name="toppings" id="toppings" multiple>
+    {{#each toppings}}
+      <option class="toppings" value={{this._id}}>{{this.name}} <span class="prices" style="display:none;">{{this.price}}</span></option>
+    {{/each}}
   </select>
-</div>
-<div>
-  <label for="frosting">Frosting</label>
-  <select name="frosting" id="frosting">
-    <option value="Sin frosting">Sin frosting</option>
-    <option value="Tradicional">Tradicional</option>
-    <option value="Chocolate">Chocolate</option>
-    <option value="Fresa">Fresa</option>
-  </select>
-</div>
-
-<div>
-  <label for="toppings">Toppings</label>
-  <select name="toppings" id="toppings" multiple>
-  {{#each toppings}}
-    <option class="toppings" value={{this._id}}>{{this.name}} <span class="prices" style="display:none;">{{this.price}}</span></option>
-  {{/each}}
-</select>
-</div>
-<div>
-  <span id="priceText">0</span>
-  <input style="display:none;" id="price" type="number" name="price" value="">
-</div>
-<button onclick="submitform(event)" type="submit">Agregar</button>
-</form>
+  </div>
+  <div>
+    <span id="priceText">0</span>
+    <input style="display:none;" id="price" type="number" name="price" value="">
+  </div>
+  <button onclick="submitform(event)" type="submit">Agregar</button>
+  </form>
 
 
-<div id="show-data">
-   {{!-- {{#each desserts}}
-      <div>
-        <h2>{{this.base}}</h2>
-        <h2>{{this.frosting}}</h2>
-        <h2>{{this.toppings}}</h2>
-        <h2>{{this.price}}</h2>
-      </div>
-   {{/each}} --}}
 
-   <button onclick="saveOrder()" type="submit">Enviar Orden</button>
+  </section>
+
+  <aside class="main-check">
+    <div id="show-data">
+      {{!-- {{#each desserts}}
+          <div>
+            <h2>{{this.base}}</h2>
+            <h2>{{this.frosting}}</h2>
+            <h2>{{this.toppings}}</h2>
+            <h2>{{this.price}}</h2>
+          </div>
+      {{/each}} --}}
+
+      <button onclick="saveOrder()" type="submit">Enviar Orden</button>
+    </div>
+  </aside>
 </div>
 
 <script>
