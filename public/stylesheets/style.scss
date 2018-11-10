@@ -385,3 +385,60 @@ b:active {
   border-color: #B5D3CC !important;
   background-color: white;
 }
+
+div#order {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.main-order {
+  width: 65%;
+  margin: 5%;
+}
+
+.main-check {
+  width: 35%;
+  margin: 10px;
+}
+
+.price-description {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 35px;
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}
+
+.order-title{
+  color: #b5d3cc !important;
+}
+
+.select {
+  background-color: white;
+  color: #514f49;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#priceText{
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 50px;
+  display: inline;
+  margin: auto;
+
+}
+
+.display-dessert {
+  font-family: "Raleway", sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 35px !important;
+  text-align: center !important;
+}
