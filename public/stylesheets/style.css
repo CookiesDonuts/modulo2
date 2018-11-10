@@ -131,7 +131,8 @@ a:active {
   background-color: #ecbeb7;
   margin: auto;
   margin-top: 3%;
-  text-align: center !important; }
+  text-align: center !important;
+  font-size: 48px; }
 
 .centrado {
   font-family: 'Raleway', sans-serif;
@@ -283,7 +284,7 @@ b:active {
   min-width: 50px; }
 
 .form-container {
-  height: calc(100vh - 200px); }
+  height: calc(100vh - 50px); }
 
 .boton-enviar {
   background-color: #B5D3CC;
@@ -316,8 +317,16 @@ b:active {
   color: #514f49 !important; }
 
 .toppings {
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
   background-color: #ecbeb7;
-  opacity: 0.8;
-  color: white; }
+  opacity: 0.9; }
+
+.boton-promos {
+  color: #B5D3CC !important;
+  border-color: #B5D3CC !important;
+  background-color: white; }
 
 /*# sourceMappingURL=style.css.map */
