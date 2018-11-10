@@ -81,7 +81,7 @@ app.use('/', checkout);
 app.use('/', order);
 app.use('/faq', faq);
 app.use('/promos', promos);
-app.use('/pagado', paid);
+app.use('/', paid);
 
 
 

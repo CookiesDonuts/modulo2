@@ -212,20 +212,20 @@
       <button onclick="submitform(event)" style="margin:auto;" type="submit" class="uk-button uk-button-primary uk-button-medium uk-width-1-4@s boton-form">Agregar</button>
 
       {{!-- <button onclick="saveOrder()" style="margin:auto;" type="submit" class="uk-button uk-button-primary uk-button-medium uk-width-1-4@s boton-form boton-form-pink">Enviar Orden</button> --}}
-<form action="/pagado" method="GET">
-            <script
-                    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                    data-key="pk_test_epuiqKESrji9Ae5A3KlGduyb"
-                    data-amount="total"
-                    data-name="Fudge Yeah"
-                    data-description="Your payment"
-                    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-                    data-locale="auto">
-            </script>
-        </form>
     
     </div>
     </form>
+    <form class="center" style="margin-top:20px;" action="/pagado" method="GET">
+                <script
+                        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                        data-key="pk_test_epuiqKESrji9Ae5A3KlGduyb"
+                        data-amount="total"
+                        data-name="Fudge Yeah"
+                        data-description="Your payment"
+                        data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                        data-locale="auto">
+                </script>
+            </form>
   </section>
   <aside class="main-check">
     <div id="show-data">
