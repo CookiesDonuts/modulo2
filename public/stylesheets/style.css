@@ -374,6 +374,16 @@ div#order {
   font-size: 14px !important;
   font-weight: 400 !important;
   line-height: 35px !important;
-  text-align: center !important; }
+  top: 50%; }
+
+.boton-form-pink {
+  background-color: #ecbeb7 !important; }
+
+#show-data {
+  font-family: "Raleway", sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 35px !important;
+  top: 50%; }
 
 /*# sourceMappingURL=style.css.map */

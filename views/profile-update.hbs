@@ -1,50 +1,69 @@
+{{> navbar user}}
 
-<h3>Actualiza tus datos</h3>
+<div  class="uk-section uk-section-muted uk-flex uk-flex-middle uk-animation-fade" uk-height-viewport>
+    <div class="uk-width-1-1">
+        <div class="uk-container" >
+            <div class="uk-grid-margin uk-grid uk-grid-stack">
+                <div class="uk-width-1-1@m">
+                    <div class="uk-margin uk-width-large uk-margin-auto uk-card uk-card-default uk-card-body uk-box-shadow-medium" style="width:70%; padding:5%;"> 
+                        <h3 class="uk-card-title uk-text-center">Actualiza tus datos</h3>
+                        <form action="/profile/{{user._id}}/edit" method="post" uk-grid>
+
+                            <div class="uk-inline uk-width-1-2@s" style="margin-top:10px;">
+                                <span class="uk-form-icon uk-inline move-icon" uk-icon="icon: user"></span>
+                                <input placeholder="Usuario" class="uk-input" type="text" name="username">
+                            </div>
 
 
-<form action="/profile/{{user._id}}/edit" method="post">
+                            <div class="uk-inline uk-width-1-2@s" style="margin-top:10px;">
+                                <span class="uk-form-icon uk-inline move-icon" uk-icon="icon: info"></span>
+                                <input placeholder="Nombre" class="uk-input" type="text" name="name">
+                            </div>
 
-    <div>
-        <label for="name">
-            Nombre:
-            <input value={{user.name}} type="text" name="name">
-        </label>
+
+                            <div class="uk-inline uk-width-1-2@s" style="margin-top:10px;">
+                                <span class="uk-form-icon uk-inline move-icon" uk-icon="icon: mail"></span>
+                                <input placeholder="Email" class="uk-input" type="email" name="email">
+                            </div>
+
+
+                            <div class="uk-inline uk-width-1-2@s" style="margin-top:10px;">
+                                <span class="uk-form-icon uk-inline move-icon" uk-icon="icon: info"></span>
+                                <input placeholder="Apellido" class="uk-input" type="text" name="lastname">
+                            </div>
+
+
+                            <div class="uk-inline uk-width-1-2@s" style="margin-top:10px;">
+                                <span class="uk-form-icon uk-inline move-icon" uk-icon="icon: lock"></span>
+                                <input placeholder="Contraseña" class="uk-input" type="password" name="password">
+                            </div>
+
+
+                            <div class="uk-inline uk-width-1-2@s" style="margin-top:10px;">
+                                <span class="uk-form-icon uk-inline move-icon" uk-icon="icon: location"></span>
+                                <input id="autocomplete" placeholder="Dirección" class="uk-input" type="text" name="address">
+                            </div>
+
+
+                            <div class="uk-inline uk-width-1-2@s" style="margin-top:10px;">
+                                <span class="uk-form-icon uk-inline move-icon" uk-icon="icon: lock"></span>
+                                <input placeholder="Confirmar Contraseña" class="uk-input" type="password" name="password-confirm">
+                            </div>
+
+
+                            <div class="uk-inline uk-width-1-2@s" style="margin-top:10px;">
+                                <span class="uk-form-icon uk-inline move-icon" uk-icon="icon: phone"></span>
+                                <input placeholder="Teléfono" class="uk-input" type="text" name="phone">
+                            </div>
+
+                            <div class="uk-margin uk-width-1-1" style="display: flex; justify-content:center">
+                                <button type="submit" class="uk-button uk-button-primary uk-button-medium uk-width-1-4@s boton-form">Actualizar</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div>
-        <label for="lastname">
-            Apellido:
-            <input value={{user.lastname}} type="text" name="lastname">
-        </label>
-    </div>
-    <div>
-        <label for="address">
-            Dirección:
-            <input value={{user.address}} type="text" name="address">
-        </label>
-    </div>
-
-  
-  <div>
-        <label for="phone">
-           Número telefónico:
-            <input value={{user.phone}} type="text" name="phone">
-        </label>
-    </div>
-
-
-  <div>
-        <label for="email">
-            Correo electrónico:
-            <input value={{user.email}} type="email" name="email">
-        </label>
-    </div>
-
-    
-
-    <div>
-        <button type="submit">Actualizar</button>
-    </div>
-
-
-
-</form>
+</div>

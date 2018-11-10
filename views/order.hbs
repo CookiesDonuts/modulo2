@@ -210,22 +210,35 @@
     <br>
     <div style="display:flex">
       <button onclick="submitform(event)" style="margin:auto;" type="submit" class="uk-button uk-button-primary uk-button-medium uk-width-1-4@s boton-form">Agregar</button>
+
+      {{!-- <button onclick="saveOrder()" style="margin:auto;" type="submit" class="uk-button uk-button-primary uk-button-medium uk-width-1-4@s boton-form boton-form-pink">Enviar Orden</button> --}}
+<form action="/pagado" method="GET">
+            <script
+                    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="pk_test_epuiqKESrji9Ae5A3KlGduyb"
+                    data-amount="total"
+                    data-name="Fudge Yeah"
+                    data-description="Your payment"
+                    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                    data-locale="auto">
+            </script>
+        </form>
+    
     </div>
     </form>
   </section>
   <aside class="main-check">
     <div id="show-data">
       {{#each desserts}}
-          <div>
+          <div class="display-dessert">
             <h3>Tu postre:</h3>
-            <h2>{{this.base}}</h2>
-            <h2>{{this.frosting}}</h2>
-            <h2>{{this.toppings.name}}</h2>
-            <h2>{{this.price}}</h2>
+            <p>{{this.base}}</p>
+            <p>{{this.frosting}}</p>
+            <p>{{this.toppings.name}}</p>
+            <p>{{this.price}}</p>
           </div>
       {{/each}}
 
-      <button onclick="saveOrder()" type="submit">Enviar Orden</button>
     </div>
   </aside>
 </div>
@@ -293,13 +306,14 @@
     var divData = document.getElementById("show-data");
     var arrayDivs = ''
     data.forEach((element)=>{
-      const hola = `<div>
-        <h2>${element.base}</h2>
-        <h2>${element.frosting}</h2>
-        <h2>${element.toppings}</h2>
-        <h2>${element.price}</h2>
+      const dessertData = `<div class="display-dessert">
+          <h3>Tu postre:</h3>
+        <p class="dessert-elem"><strong>Base:</strong>${element.base}</p>
+        <p class="dessert-elem"><strong>Frosting:</strong>${element.frosting}</p>
+        <p class="dessert-elem"><strong>Toppings:</strong>${element.toppings}</p>
+        <p class="dessert-elem"><strong>Precio:</strong>${element.price}</p>
       </div>`
-      arrayDivs += hola;
+      arrayDivs += dessertData;
     })
     divData.innerHTML = arrayDivs
     //ivData.innerHTML += createItemNode();

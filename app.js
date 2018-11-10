@@ -72,6 +72,8 @@ const checkout = require("./routes/checkout");
 const order = require("./routes/order");
 const faq = require("./routes/faq")
 const promos = require("./routes/promos")
+const paid = require("./routes/pagado")
+
 app.use('/', index);
 app.use("/auth", auth);
 app.use("/", profile);
@@ -79,6 +81,8 @@ app.use('/', checkout);
 app.use('/', order);
 app.use('/faq', faq);
 app.use('/promos', promos);
+app.use('/pagado', paid);
+
 
 
 module.exports = app;

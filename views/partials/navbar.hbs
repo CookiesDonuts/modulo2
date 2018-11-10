@@ -7,7 +7,7 @@
         <a href="/contact">CONTACTO</a>
         {{#if this._id}}
             <a href="/auth/logout">LOGOUT</a>
-            <a href=""></a>
+            <a href="/profile">{{user.username}}</a>
         {{else}}
             <a href="/auth/login">INICIA SESIÓN</a>
             <a href="/auth/signup">REGÍSTRATE</a>
