@@ -28,7 +28,7 @@
                     </div>
                     <div class="uk-card-body">
                         <h3 class="uk-card-title center">Galletas</h3>
-                        <p class="price-description">12 galletas por <br><strong>$140</strong></p>
+                        <p class="price-description">12 galletas por <br><strong>$150</strong></p>
                     </div>
                 </div>
             </div>
@@ -245,7 +245,7 @@
 
 <script>
   var toppings = document.querySelectorAll('.toppings');
-  console.log(toppings);
+  
   var prices  = [];
   var total = 0;
   var dessertPrice = 170;
@@ -264,12 +264,12 @@
       });
       document.querySelector('#priceText').innerHTML = total;
       document.querySelector('#price').value = total;
-      console.log(total);
+      
 
       };
     });
   });
-    console.log(dessert);
+    
   function submitform(event) {
     
     var toppings = Array.prototype.slice.call(document.querySelectorAll("#toppings option:checked"),0).map((v,i,a)=>{
@@ -287,7 +287,7 @@
     };
     desserts.push(dessert);
 
-    console.log(desserts);
+   
     cleanInputs();
     showData(desserts);
     event.preventDefault();
@@ -302,7 +302,7 @@
   }
 
   function showData(data) {
-    console.log("data",data)
+    
     var divData = document.getElementById("show-data");
     var arrayDivs = ''
     data.forEach((element)=>{
