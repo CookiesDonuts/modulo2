@@ -12,7 +12,10 @@ const dessertSchema = new Schema ({
         enum: ['Sin frosting','Tradicional','Chocolate','Fresa'],
         default: 'Sin frosting'
 },
-    price: Number,
+    price: {
+        type: Number,
+        default: 170
+    },
     // _order: {type: Schema.Types.ObjectId, ref: 'Order'},
     _toppings: [{type: Schema.Types.ObjectId, ref: 'Topping'}]
 });

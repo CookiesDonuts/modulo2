@@ -217,7 +217,7 @@
     <div id="show-data">
       {{#each desserts}}
           <div>
-            <h3>Postre:</h3>
+            <h3>Tu postre:</h3>
             <h2>{{this.base}}</h2>
             <h2>{{this.frosting}}</h2>
             <h2>{{this.toppings.name}}</h2>
@@ -235,6 +235,7 @@
   console.log(toppings);
   var prices  = [];
   var total = 0;
+  var dessertPrice = 170;
   var desserts = [];
   var base = document.getElementById("base");
   var frosting = document.getElementById("frosting");
@@ -245,7 +246,7 @@
       if(topping.selected) {
       var price = topping.innerHTML.slice(-2);
       prices.push(parseInt(price));
-      total = prices.reduce((sum, val)=>{
+      total = dessertPrice + prices.reduce((sum, val)=>{
         return sum + val;
       });
       document.querySelector('#priceText').innerHTML = total;
