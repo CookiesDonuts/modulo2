@@ -94,7 +94,7 @@ a:link {
 
 /* visited link */
 a:visited {
-  color: darkgrey !important;
+  color: darkgrey;
 }
 
 /* mouse over link */
@@ -348,4 +348,30 @@ b:active {
 
 .order-home{
   color:white !important;
+}
+
+.frostings{
+  margin-top: 4%;
+}
+
+.ultima{
+  margin-top: 4%;
+}
+
+.faq-p{
+  font-size: 14px;
+  color: darkgray;
+  letter-spacing: 0.3px;
+  line-height: 30px;
+}
+
+.preguntas-faq{
+  letter-spacing: 0.7px;
+  color: #514f49 !important;
+}
+
+.toppings{
+  background-color: #ecbeb7;
+  opacity: 0.8;
+  color: white;
 }
