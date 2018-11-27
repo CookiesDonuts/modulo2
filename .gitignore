@@ -13,3 +13,5 @@ npm-debug.log
 
 # Seeds
 seeds.js
+
+package-lock.json
